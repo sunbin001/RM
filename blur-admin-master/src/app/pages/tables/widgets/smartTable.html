@@ -1,0 +1,37 @@
+<div class="horizontal-scroll">
+ <!-- smartTablePageSize -->
+  <table class="table" st-table="smartTableData">
+    <thead>
+        <tr></tr>
+            <th><input st-search="firstName" placeholder="Search First Name" class="input-sm form-control search-input"
+                       type="search"/></th>
+            <th style="display:none"><input st-search="lastName" placeholder="Search Last Name" class="input-sm form-control search-input"
+                       type="search"/></th>
+            <th style="display:none"><input st-search="username" placeholder="Search Username" class="input-sm form-control search-input"
+                       type="search"/></th>
+          </tr>
+    <tr class="sortable " style="background: #f5f5f5;">
+      <!-- <th class="table-id" st-sort="id" st-sort-default="true">#</th> -->
+      <th st-sort="firstName">Name</th>
+      <th st-sort="lastName">Phone number</th>
+      <th st-sort="username">Appointment time</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in smartTableData">
+      <!-- <td class="table-id">{{item.id}}</td> -->
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>{{item.username}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="6" class="text-center">
+        <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+</div>
