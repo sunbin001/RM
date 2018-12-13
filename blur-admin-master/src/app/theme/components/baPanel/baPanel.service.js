@@ -10,7 +10,6 @@
 
   /** @ngInject */
   function baPanel() {
-
     /** Base baPanel directive */
     return {
       restrict: 'A',
@@ -18,11 +17,15 @@
       template: function(elem, attrs) {
         var res = '<div class="panel-body" ng-transclude></div>';
         if (attrs.baPanelTitle) {
-          var titleTpl = '<div class="panel-heading clearfix"><h3 class="panel-title">' + attrs.baPanelTitle + '</h3></div>';
+          var titleTpl = '<div class="panel-heading clearfix"><h3 class="panel-title">' + "<span>{{baPanelTitle}}</span>" + '</h3><i ng-click="baPanelClose()" style="position: relative;float: right;top: -25px;right: -15px;" class="ion-close-circled"></i></div>';
           res = titleTpl + res; // title should be before
         }
 
         return res;
+      },
+      scope: {
+        baPanelTitle:"@",
+        baPanelClose: "&"
       }
     };
   }

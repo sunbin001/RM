@@ -1,5 +1,5 @@
 .page-top {
-  background-color: $sidebar;
+  background-color: $sideHeaderbar;
   position: fixed;
   z-index: 904;
   box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
@@ -24,7 +24,7 @@ a.al-logo {
   line-height: 60px;
 
   span {
-    color: $primary;
+    color: $pageLogColor;
   }
 }
 

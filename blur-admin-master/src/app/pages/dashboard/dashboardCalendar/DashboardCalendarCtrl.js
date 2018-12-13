@@ -10,31 +10,32 @@
 
   /** @ngInject */
   function DashboardCalendarCtrl(baConfig) {
+ 
     var dashboardColors = baConfig.colors.dashboard;
     var $element = $('#calendar').fullCalendar({
-      //height: 335,
+      height: 30,
+      isLoading: true,
       header: {
         left: 'prev,next today',
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
       },
-      defaultDate: '2016-03-08',
+      defaultDate: '2018-12-12',
       selectable: true,
-      selectHelper: true,
+      selectHelper: false,
       select: function (start, end) {
-        var title = prompt('Event Title:');
-        var eventData;
-        if (title) {
-          eventData = {
-            title: title,
-            start: start,
-            end: end
-          };
-          $element.fullCalendar('renderEvent', eventData, true); // stick? = true
-        }
-        $element.fullCalendar('unselect');
+
       },
-      editable: true,
+      eventAfterRender: function() {
+        debugger;
+      },
+      dayClick: function() {
+console.log('dddddddddddddddddd')
+      },
+      viewRender:function() {
+        debugger;
+      },
+      editable: false,
       eventLimit: true, // allow "more" link when too many events
       events: [
         {

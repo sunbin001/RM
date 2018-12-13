@@ -12,12 +12,14 @@
   function TablesPageCtrl($scope, $filter, editableOptions, editableThemes) {
 
     $scope.smartTablePageSize = 10;
-
+    $scope.userInfoDetail = {
+      show : false
+    }
     $scope.smartTableData = [
       {
         id: 1,
         firstName: 'Mark',
-        lastName: 'Otto',
+        PhoneNumber: '15529313925',
         username: '@mdo',
         email: 'mdo@gmail.com',
         age: '28'
@@ -25,7 +27,7 @@
       {
         id: 2,
         firstName: 'Jacob',
-        lastName: 'Thornton',
+        PhoneNumber: '15529313925',
         username: '@fat',
         email: 'fat@yandex.ru',
         age: '45'
@@ -33,7 +35,7 @@
       {
         id: 3,
         firstName: 'Larry',
-        lastName: 'Bird',
+        PhoneNumber: '15529313925',
         username: '@twitter',
         email: 'twitter@outlook.com',
         age: '18'
@@ -41,7 +43,7 @@
       {
         id: 4,
         firstName: 'John',
-        lastName: 'Snow',
+        PhoneNumber: '15529313925',
         username: '@snow',
         email: 'snow@gmail.com',
         age: '20'
@@ -49,7 +51,7 @@
       {
         id: 5,
         firstName: 'Jack',
-        lastName: 'Sparrow',
+        PhoneNumber: '15529313925',
         username: '@jack',
         email: 'jack@yandex.ru',
         age: '30'
@@ -57,7 +59,7 @@
       {
         id: 6,
         firstName: 'Ann',
-        lastName: 'Smith',
+        PhoneNumber: '15529313925',
         username: '@ann',
         email: 'ann@gmail.com',
         age: '21'
@@ -65,7 +67,7 @@
       {
         id: 7,
         firstName: 'Barbara',
-        lastName: 'Black',
+        PhoneNumber: '15529313925',
         username: '@barbara',
         email: 'barbara@yandex.ru',
         age: '43'
@@ -73,7 +75,7 @@
       {
         id: 8,
         firstName: 'Sevan',
-        lastName: 'Bagrat',
+        PhoneNumber: '15529313925',
         username: '@sevan',
         email: 'sevan@outlook.com',
         age: '13'
@@ -81,7 +83,7 @@
       {
         id: 9,
         firstName: 'Ruben',
-        lastName: 'Vardan',
+        PhoneNumber: '15529313925',
         username: '@ruben',
         email: 'ruben@gmail.com',
         age: '22'
@@ -89,7 +91,7 @@
       {
         id: 10,
         firstName: 'Karen',
-        lastName: 'Sevan',
+        PhoneNumber: '15529313925',
         username: '@karen',
         email: 'karen@yandex.ru',
         age: '33'
@@ -97,7 +99,7 @@
       {
         id: 11,
         firstName: 'Mark',
-        lastName: 'Otto',
+        PhoneNumber: '15529313925',
         username: '@mark',
         email: 'mark@gmail.com',
         age: '38'
@@ -105,7 +107,7 @@
       {
         id: 12,
         firstName: 'Jacob',
-        lastName: 'Thornton',
+        PhoneNumber: '15529313925',
         username: '@jacob',
         email: 'jacob@yandex.ru',
         age: '48'
@@ -113,7 +115,7 @@
       {
         id: 13,
         firstName: 'Haik',
-        lastName: 'Hakob',
+        PhoneNumber: '15529313925',
         username: '@haik',
         email: 'haik@outlook.com',
         age: '48'
@@ -121,7 +123,7 @@
       {
         id: 14,
         firstName: 'Garegin',
-        lastName: 'Jirair',
+        PhoneNumber: '15529313925',
         username: '@garegin',
         email: 'garegin@gmail.com',
         age: '40'
@@ -129,7 +131,7 @@
       {
         id: 15,
         firstName: 'Krikor',
-        lastName: 'Bedros',
+        PhoneNumber: '15529313925',
         username: '@krikor',
         email: 'krikor@yandex.ru',
         age: '32'
@@ -137,7 +139,7 @@
       {
         "id": 16,
         "firstName": "Francisca",
-        "lastName": "Brady",
+        "PhoneNumber": "15529313925",
         "username": "@Gibson",
         "email": "franciscagibson@comtours.com",
         "age": 11
@@ -145,7 +147,7 @@
       {
         "id": 17,
         "firstName": "Tillman",
-        "lastName": "Figueroa",
+        "PhoneNumber": "15529313925",
         "username": "@Snow",
         "email": "tillmansnow@comtours.com",
         "age": 34
@@ -153,7 +155,7 @@
       {
         "id": 18,
         "firstName": "Jimenez",
-        "lastName": "Morris",
+        "PhoneNumber": "15529313925",
         "username": "@Bryant",
         "email": "jimenezbryant@comtours.com",
         "age": 45
@@ -161,7 +163,7 @@
       {
         "id": 19,
         "firstName": "Sandoval",
-        "lastName": "Jacobson",
+        "PhoneNumber": "15529313925",
         "username": "@Mcbride",
         "email": "sandovalmcbride@comtours.com",
         "age": 32
@@ -169,7 +171,7 @@
       {
         "id": 20,
         "firstName": "Griffin",
-        "lastName": "Torres",
+        "PhoneNumber": "15529313925",
         "username": "@Charles",
         "email": "griffincharles@comtours.com",
         "age": 19
@@ -177,7 +179,7 @@
       {
         "id": 21,
         "firstName": "Cora",
-        "lastName": "Parker",
+        "PhoneNumber": "15529313925",
         "username": "@Caldwell",
         "email": "coracaldwell@comtours.com",
         "age": 27
@@ -185,7 +187,7 @@
       {
         "id": 22,
         "firstName": "Cindy",
-        "lastName": "Bond",
+        "PhoneNumber": "15529313925",
         "username": "@Velez",
         "email": "cindyvelez@comtours.com",
         "age": 24
@@ -193,7 +195,7 @@
       {
         "id": 23,
         "firstName": "Frieda",
-        "lastName": "Tyson",
+        "PhoneNumber": "15529313925",
         "username": "@Craig",
         "email": "friedacraig@comtours.com",
         "age": 45
@@ -201,7 +203,7 @@
       {
         "id": 24,
         "firstName": "Cote",
-        "lastName": "Holcomb",
+        "PhoneNumber": "15529313925",
         "username": "@Rowe",
         "email": "coterowe@comtours.com",
         "age": 20
@@ -209,7 +211,7 @@
       {
         "id": 25,
         "firstName": "Trujillo",
-        "lastName": "Mejia",
+        "PhoneNumber": "15529313925",
         "username": "@Valenzuela",
         "email": "trujillovalenzuela@comtours.com",
         "age": 16
@@ -217,7 +219,7 @@
       {
         "id": 26,
         "firstName": "Pruitt",
-        "lastName": "Shepard",
+        "PhoneNumber": "15529313925",
         "username": "@Sloan",
         "email": "pruittsloan@comtours.com",
         "age": 44
@@ -225,7 +227,7 @@
       {
         "id": 27,
         "firstName": "Sutton",
-        "lastName": "Ortega",
+        "PhoneNumber": "15529313925",
         "username": "@Black",
         "email": "suttonblack@comtours.com",
         "age": 42
@@ -233,7 +235,7 @@
       {
         "id": 28,
         "firstName": "Marion",
-        "lastName": "Heath",
+        "PhoneNumber": "15529313925",
         "username": "@Espinoza",
         "email": "marionespinoza@comtours.com",
         "age": 47
@@ -241,7 +243,7 @@
       {
         "id": 29,
         "firstName": "Newman",
-        "lastName": "Hicks",
+        "PhoneNumber": "15529313925",
         "username": "@Keith",
         "email": "newmankeith@comtours.com",
         "age": 15
@@ -249,7 +251,7 @@
       {
         "id": 30,
         "firstName": "Boyle",
-        "lastName": "Larson",
+        "PhoneNumber": "15529313925",
         "username": "@Summers",
         "email": "boylesummers@comtours.com",
         "age": 32
@@ -257,7 +259,7 @@
       {
         "id": 31,
         "firstName": "Haynes",
-        "lastName": "Vinson",
+        "PhoneNumber": "15529313925",
         "username": "@Mckenzie",
         "email": "haynesmckenzie@comtours.com",
         "age": 15
@@ -265,7 +267,7 @@
       {
         "id": 32,
         "firstName": "Miller",
-        "lastName": "Acosta",
+        "PhoneNumber": "15529313925",
         "username": "@Young",
         "email": "milleryoung@comtours.com",
         "age": 55
@@ -273,7 +275,7 @@
       {
         "id": 33,
         "firstName": "Johnston",
-        "lastName": "Brown",
+        "PhoneNumber": "15529313925",
         "username": "@Knight",
         "email": "johnstonknight@comtours.com",
         "age": 29
@@ -281,7 +283,7 @@
       {
         "id": 34,
         "firstName": "Lena",
-        "lastName": "Pitts",
+        "PhoneNumber": "15529313925",
         "username": "@Forbes",
         "email": "lenaforbes@comtours.com",
         "age": 25
@@ -289,7 +291,7 @@
       {
         "id": 35,
         "firstName": "Terrie",
-        "lastName": "Kennedy",
+        "PhoneNumber": "15529313925",
         "username": "@Branch",
         "email": "terriebranch@comtours.com",
         "age": 37
@@ -297,7 +299,7 @@
       {
         "id": 36,
         "firstName": "Louise",
-        "lastName": "Aguirre",
+        "PhoneNumber": "15529313925",
         "username": "@Kirby",
         "email": "louisekirby@comtours.com",
         "age": 44
@@ -305,7 +307,7 @@
       {
         "id": 37,
         "firstName": "David",
-        "lastName": "Patton",
+        "PhoneNumber": "15529313925",
         "username": "@Sanders",
         "email": "davidsanders@comtours.com",
         "age": 26
@@ -313,7 +315,7 @@
       {
         "id": 38,
         "firstName": "Holden",
-        "lastName": "Barlow",
+        "PhoneNumber": "15529313925",
         "username": "@Mckinney",
         "email": "holdenmckinney@comtours.com",
         "age": 11
@@ -321,7 +323,7 @@
       {
         "id": 39,
         "firstName": "Baker",
-        "lastName": "Rivera",
+        "PhoneNumber": "15529313925",
         "username": "@Montoya",
         "email": "bakermontoya@comtours.com",
         "age": 47
@@ -329,7 +331,7 @@
       {
         "id": 40,
         "firstName": "Belinda",
-        "lastName": "Lloyd",
+        "PhoneNumber": "15529313925",
         "username": "@Calderon",
         "email": "belindacalderon@comtours.com",
         "age": 21
@@ -337,7 +339,7 @@
       {
         "id": 41,
         "firstName": "Pearson",
-        "lastName": "Patrick",
+        "PhoneNumber": "15529313925",
         "username": "@Clements",
         "email": "pearsonclements@comtours.com",
         "age": 42
@@ -345,7 +347,7 @@
       {
         "id": 42,
         "firstName": "Alyce",
-        "lastName": "Mckee",
+        "PhoneNumber": "15529313925",
         "username": "@Daugherty",
         "email": "alycedaugherty@comtours.com",
         "age": 55
@@ -353,7 +355,7 @@
       {
         "id": 43,
         "firstName": "Valencia",
-        "lastName": "Spence",
+        "PhoneNumber": "15529313925",
         "username": "@Olsen",
         "email": "valenciaolsen@comtours.com",
         "age": 20
@@ -361,7 +363,7 @@
       {
         "id": 44,
         "firstName": "Leach",
-        "lastName": "Holcomb",
+        "PhoneNumber": "15529313925",
         "username": "@Humphrey",
         "email": "leachhumphrey@comtours.com",
         "age": 28
@@ -369,7 +371,7 @@
       {
         "id": 45,
         "firstName": "Moss",
-        "lastName": "Baxter",
+        "PhoneNumber": "15529313925",
         "username": "@Fitzpatrick",
         "email": "mossfitzpatrick@comtours.com",
         "age": 51
@@ -377,7 +379,7 @@
       {
         "id": 46,
         "firstName": "Jeanne",
-        "lastName": "Cooke",
+        "PhoneNumber": "15529313925",
         "username": "@Ward",
         "email": "jeanneward@comtours.com",
         "age": 59
@@ -385,7 +387,7 @@
       {
         "id": 47,
         "firstName": "Wilma",
-        "lastName": "Briggs",
+        "PhoneNumber": "15529313925",
         "username": "@Kidd",
         "email": "wilmakidd@comtours.com",
         "age": 53
@@ -393,7 +395,7 @@
       {
         "id": 48,
         "firstName": "Beatrice",
-        "lastName": "Perry",
+        "PhoneNumber": "15529313925",
         "username": "@Gilbert",
         "email": "beatricegilbert@comtours.com",
         "age": 39
@@ -401,7 +403,7 @@
       {
         "id": 49,
         "firstName": "Whitaker",
-        "lastName": "Hyde",
+        "PhoneNumber": "15529313925",
         "username": "@Mcdonald",
         "email": "whitakermcdonald@comtours.com",
         "age": 35
@@ -409,7 +411,7 @@
       {
         "id": 50,
         "firstName": "Rebekah",
-        "lastName": "Duran",
+        "PhoneNumber": "15529313925",
         "username": "@Gross",
         "email": "rebekahgross@comtours.com",
         "age": 40
@@ -417,7 +419,7 @@
       {
         "id": 51,
         "firstName": "Earline",
-        "lastName": "Mayer",
+        "PhoneNumber": "15529313925",
         "username": "@Woodward",
         "email": "earlinewoodward@comtours.com",
         "age": 52
@@ -425,7 +427,7 @@
       {
         "id": 52,
         "firstName": "Moran",
-        "lastName": "Baxter",
+        "PhoneNumber": "15529313925",
         "username": "@Johns",
         "email": "moranjohns@comtours.com",
         "age": 20
@@ -433,7 +435,7 @@
       {
         "id": 53,
         "firstName": "Nanette",
-        "lastName": "Hubbard",
+        "PhoneNumber": "15529313925",
         "username": "@Cooke",
         "email": "nanettecooke@comtours.com",
         "age": 55
@@ -441,7 +443,7 @@
       {
         "id": 54,
         "firstName": "Dalton",
-        "lastName": "Walker",
+        "PhoneNumber": "15529313925",
         "username": "@Hendricks",
         "email": "daltonhendricks@comtours.com",
         "age": 25
@@ -449,7 +451,7 @@
       {
         "id": 55,
         "firstName": "Bennett",
-        "lastName": "Blake",
+        "PhoneNumber": "15529313925",
         "username": "@Pena",
         "email": "bennettpena@comtours.com",
         "age": 13
@@ -457,7 +459,7 @@
       {
         "id": 56,
         "firstName": "Kellie",
-        "lastName": "Horton",
+        "PhoneNumber": "15529313925",
         "username": "@Weiss",
         "email": "kellieweiss@comtours.com",
         "age": 48
@@ -465,7 +467,7 @@
       {
         "id": 57,
         "firstName": "Hobbs",
-        "lastName": "Talley",
+        "PhoneNumber": "15529313925",
         "username": "@Sanford",
         "email": "hobbssanford@comtours.com",
         "age": 28
@@ -473,7 +475,7 @@
       {
         "id": 58,
         "firstName": "Mcguire",
-        "lastName": "Donaldson",
+        "PhoneNumber": "15529313925",
         "username": "@Roman",
         "email": "mcguireroman@comtours.com",
         "age": 38
@@ -481,7 +483,7 @@
       {
         "id": 59,
         "firstName": "Rodriquez",
-        "lastName": "Saunders",
+        "PhoneNumber": "15529313925",
         "username": "@Harper",
         "email": "rodriquezharper@comtours.com",
         "age": 20
@@ -489,7 +491,7 @@
       {
         "id": 60,
         "firstName": "Lou",
-        "lastName": "Conner",
+        "PhoneNumber": "15529313925",
         "username": "@Sanchez",
         "email": "lousanchez@comtours.com",
         "age": 16
@@ -708,7 +710,19 @@
     editableThemes['bs3'].submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>';
     editableThemes['bs3'].cancelTpl = '<button type="button" ng-click="$form.$cancel()" class="btn btn-default btn-with-icon"><i class="ion-close-round"></i></button>';
 
-
+    $scope.showUserInfo = function(item) {
+      $scope.userInfoDetail = {
+        show:true,
+        ...item,
+      }
+      console.dir( $scope.userInfoDetail)
+    }
+    $scope.closeBtn = function() {
+      console.log("33333333333333333333")
+      $scope.userInfoDetail = {
+        show:false,
+      }
+    }
   }
 
 })();

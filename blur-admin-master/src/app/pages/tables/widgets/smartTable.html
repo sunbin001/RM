@@ -5,7 +5,7 @@
         <tr></tr>
             <th><input st-search="firstName" placeholder="Search First Name" class="input-sm form-control search-input"
                        type="search"/></th>
-            <th style="display:none"><input st-search="lastName" placeholder="Search Last Name" class="input-sm form-control search-input"
+            <th style="display:none"><input st-search="PhoneNumber" placeholder="Search Last Name" class="input-sm form-control search-input"
                        type="search"/></th>
             <th style="display:none"><input st-search="username" placeholder="Search Username" class="input-sm form-control search-input"
                        type="search"/></th>
@@ -13,16 +13,16 @@
     <tr class="sortable " style="background: #f5f5f5;">
       <!-- <th class="table-id" st-sort="id" st-sort-default="true">#</th> -->
       <th st-sort="firstName">Name</th>
-      <th st-sort="lastName">Phone number</th>
+      <th st-sort="PhoneNumber">Phone number</th>
       <th st-sort="username">Appointment time</th>
     </tr>
 
     </thead>
     <tbody>
-    <tr ng-repeat="item in smartTableData">
+    <tr  ng-click="showUserInfo({item})" ng-repeat="item in smartTableData">
       <!-- <td class="table-id">{{item.id}}</td> -->
       <td>{{item.firstName}}</td>
-      <td>{{item.lastName}}</td>
+      <td>{{item.PhoneNumber}}</td>
       <td>{{item.username}}</td>
     </tr>
     </tbody>
@@ -34,4 +34,15 @@
     </tr>
     </tfoot>
   </table>
+      <div ng-show="userInfoDetail.show" 
+         style="top: 20%;left: 25%; position: fixed;" class="col-md-6"
+         ba-panel
+         ba-panel-close ="closeBtn()"
+         ba-panel-title="Dismissible alerts"
+         ba-panel-class="with-scroll">
+      <div >
+        <div>firstName: {{userInfoDetail.item.firstName}}</div>
+        <div>PhoneNumber:{{userInfoDetail.item.PhoneNumber}}</div>
+      </div>
+    </div>
 </div>

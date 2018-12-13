@@ -117,12 +117,15 @@ div.blurCalendar{
   }
 
   .fc-today {
-    background: rgba(255,255,255,0.15);
+    background: #008580 !important;
+  }
+  .fc-state-highlight .fc-day-number{
+    color: #FFFFFF
   }
 }
 
 .fc-highlight {
-  background: rgba(255,255,255,0.25);
+  background:rgba(87, 26, 26, 0.25);
   opacity: .3;
 }
 
@@ -474,8 +477,8 @@ a.fc-more {
 }
 
 .fc-basic-view tbody .fc-row {
-  min-height: 4em;
-  max-height: 70px;
+  // min-height: 4em;
+  // max-height: 70px;
 }
 
 .fc-row.fc-rigid {
@@ -510,7 +513,7 @@ a.fc-more {
 }
 
 .fc-ltr .fc-basic-view .fc-day-number {
-  text-align: right;
+  text-align: center;
 }
 
 .fc-rtl .fc-basic-view .fc-day-number {
